@@ -1,14 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import Landing from './Landing';
+import Nav from './Nav';
+import About from './About';
+
+const Main = styled.div`
+  background-color: #282c34;
+  min-height: 100vh;
+  color: white;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Meeko Rusdi</h1>
-      </header>
-    </div>
+    <Main>
+      <Nav />
+      <Landing />
+      <About />
+    </Main>
   );
 }
 
