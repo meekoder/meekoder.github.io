@@ -8,16 +8,22 @@ const StyledNav = styled.nav`
   justify-content: flex-end;
 `;
 
+const StyledLink = styled.li`
+
+`;
+
 const Links = styled.ul`
   display: flex;
   width: 30%;
   align-items: center;
   justify-content: space-between;
   list-style-type: none;
-`;
 
-const StyledLink = styled.li`
-  
+  ${StyledLink}:hover {
+    cursor: pointer;
+    color: #ace6d3;
+    transition: color .2s cubic-bezier(.3,0,.45,1);
+  }
 `;
 
 const Resume = styled.button`

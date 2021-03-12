@@ -1,27 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const StyledDiv = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
 const Greeting = styled.p`
  font-size: 20px; 
- text-align: left;
+ margin-bottom: 0;
 `;
 
 const Name = styled.p`
+  margin: 0;
   font-size: 50px;
-  text-align: left;
   font-weight: bold;
-`
+`;
+
 const Intro = styled.p`
   font-size: 20px;
-  text-align: left;
-`
+`;
+
 function Landing() {
   return (
-    <div>
+    <StyledDiv>
       <Greeting>Hi, my name is</Greeting>     
       <Name>Meeko Rusdi.</Name>
-      <Intro>I'm a software engineer based in the San Francisco Bay Area.</Intro>
-    </div>
+      <Intro>I'm a software engineer.</Intro>
+    </StyledDiv>
   );
 }
 
