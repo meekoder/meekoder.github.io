@@ -5,6 +5,7 @@ import Nav from './Nav';
 import About from './About';
 import Experience from './Experience';
 import Projects from './Projects';
+import Contact from './Contact';
 
 const Main = styled.div`
   background-color: #2f343f;
@@ -28,6 +29,7 @@ function App() {
         <About />
         <Experience />
         <Projects />
+        <Contact />
       </Content>
     </Main>
   );
