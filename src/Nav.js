@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
+import resume from './resume.pdf';
 
 const StyledNav = styled.nav`
   display: flex;
@@ -27,7 +28,7 @@ const Links = styled.ul`
   }
 `;
 
-const Resume = styled.button`
+const Resume = styled.div`
   cursor: pointer;
   border: 1px solid #ace6d3;
   border-radius: 5px;
@@ -43,15 +44,16 @@ const Resume = styled.button`
     outline: none;
     transition: color.2s cubic-bezier(.3,0,.45,1), background-color .2s cubic-bezier(.3,0,.45,1);
   }
-  &:after {
-    display: none !important;
-  }
 `;
 
 const Header = styled.header`
 `;
 
-function Nav() {
+const Nav = () => {
+
+  const handleResume = () => {
+    window.open(resume);
+  };
 
   return (
     <Header>
@@ -61,11 +63,18 @@ function Nav() {
           <StyledLink><Link activeClass="active" to="experience" spy={ true } smooth={ true }>Experience</Link></StyledLink>
           <StyledLink><Link activeClass="active" to="projects" spy={ true } smooth={ true }>Projects</Link></StyledLink>
           <StyledLink><Link activeClass="active" to="contact" spy={ true } smooth={ true }>Contact</Link></StyledLink>
-          <Resume>Resume</Resume>
+          <Resume onClick={handleResume}>
+            <a
+              href={resume}
+              target="_blank"
+              rel="noopener noreferrer">
+            </a>
+            Resume
+          </Resume>
         </Links>
       </StyledNav>
     </Header>
   );
-}
+};
 
 export default Nav;
