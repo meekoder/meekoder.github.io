@@ -4,9 +4,6 @@ import styled from 'styled-components';
 import Icon from './icons/icon';
 
 const StyledDiv = styled.div`
-  position: fixed;
-  height: 90vh;
-  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,7 +11,6 @@ const StyledDiv = styled.div`
 
 const SocialList = styled.ul`
   display: flex;
-  flex-direction: column;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -22,28 +18,22 @@ const SocialList = styled.ul`
 
   &:after {
     content: '';
-    display: block;
-    width: 1px;
-    height: 90px;
-    margin: 0 auto;
-    background-color: var(--light-slate);
+    height: 5em;
   }
 
   li {
-    &:last-of-type {
-      margin-bottom: 20px;
-    }
     a {
-      padding: 10px;
+      padding: 2em;
 
-      &:hover,
-      &:focus {
-        transform: translateY(-3px);
-      }
 
       svg {
-        width: 20px;
-        height: 20px;
+        width: 1.5em;
+        height: 1.5em;
+        &:hover,
+        &:focus {
+          transform: translateY(-3px);
+          transition: transform .3s cubic-bezier(.3,0,.45,1);
+        }
       }
     }
   }

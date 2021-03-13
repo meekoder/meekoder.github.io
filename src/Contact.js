@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Social from './Social';
 
 const Main = styled.div`
   width: 50%;
@@ -108,6 +109,7 @@ const Contact = () => {
         <Message placeholder="Your Message"></Message>
       </Form>
       <Send type="submit">Send</Send>
+      <Social />
     </Main>
   );
 };
