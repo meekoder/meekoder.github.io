@@ -58,8 +58,8 @@ function Nav() {
       <StyledNav>
         <Links>
           <StyledLink><Link activeClass="active" to="about" spy={ true } smooth={ true }>About</Link></StyledLink>
-          <StyledLink>Experience</StyledLink>
-          <StyledLink>Projects</StyledLink>
+          <StyledLink><Link activeClass="active" to="experience" spy={ true } smooth={ true }>Experience</Link></StyledLink>
+          <StyledLink><Link activeClass="active" to="projects" spy={ true } smooth={ true }>Projects</Link></StyledLink>
           <StyledLink>Contact</StyledLink>
           <Resume>Resume</Resume>
         </Links>

@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Landing from './Landing';
 import Nav from './Nav';
 import About from './About';
+import Experience from './Experience';
+import Projects from './Projects';
 
 const Main = styled.div`
   background-color: #2f343f;
@@ -24,6 +26,8 @@ function App() {
       <Content>
         <Landing />
         <About />
+        <Experience />
+        <Projects />
       </Content>
     </Main>
   );
