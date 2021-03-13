@@ -3,9 +3,11 @@ import styled from 'styled-components';
 
 const Main = styled.div`
   width: 50%;
+  height: 80vh;
 `;
 
 const Title = styled.p`
+  color: #ace6d3;
   text-align: left;
   font-size: 30px;
   font-weight: bold;
@@ -15,6 +17,7 @@ const Subtitle = styled.p`
   text-align: left;
   font-size: 20px;
   font-weight: bold;
+  color: #747f97;
 `;
 
 const Text = styled.p`
@@ -49,7 +52,7 @@ const StyledList = styled.ul`
 
 function About() {
   return (
-    <Main>
+    <Main id="about">
       <Title>About Me</Title>     
       <StyledDiv>
         <StyledParagraph>
