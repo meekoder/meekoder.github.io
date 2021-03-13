@@ -42,7 +42,21 @@ const Projects = () => {
         <Picture alt="spotted landing page" src="/spotted.png"></Picture>
         <StyledParagraph>
           <Subtitle>Spotted</Subtitle>
-          <p>A web application geared towards car enthusiasts. View and post photos of vehicles, locations of car meets, or buy/sell a vehicle on the marketplace. Follow people you know and more.</p>
+          <p>An application geared towards car enthusiasts. View and post photos of vehicles, locations of car meets, or buy/sell a vehicle on the marketplace. Follow people you know and more.</p>
+        </StyledParagraph>
+      </StyledDiv>
+      <StyledDiv>
+        <StyledParagraph>
+          <Subtitle>E-Commerce Store</Subtitle>
+          <p>A web application built by a team of engineers that delivers a modular UI/UX for an E-commerce store. View photos of products, related items, and user reviews. Filter or sort reviews and add items to your cart.</p>
+        </StyledParagraph>
+        <Picture alt="e-commerce reviews" src="/ecom.png"></Picture>
+      </StyledDiv>
+      <StyledDiv>
+        <Picture alt="vacation rental marketplace" src="/vacation.png"></Picture>
+        <StyledParagraph>
+          <Subtitle>Vacation Rental Marketplace</Subtitle>
+          <p>Primarily a backend focused application whose goal was to optimize and scale a system architecture for an online vacation rental marketplace. Microservices were scaled using NGINX, stress tested with Loader.io, and New Relic was utilized to determine bottlenecks.</p>
         </StyledParagraph>
       </StyledDiv>
     </Main>
