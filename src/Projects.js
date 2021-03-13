@@ -13,10 +13,38 @@ const Title = styled.p`
   font-weight: bold;
 `;
 
+const Picture = styled.img`
+  height: 60%;
+  width: 60%;
+`;
+
+const StyledDiv = styled.div`
+  display: flex;
+`;
+
+const Subtitle = styled.p`
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  color: #747f97;
+`;
+
+const StyledParagraph = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 const Projects = () => {
   return (
     <Main id="projects">
-      <Title>Some of My Work</Title>
+      <Title>Some of My Projects</Title>
+      <StyledDiv>
+        <Picture alt="spotted landing page" src="/spotted.png"></Picture>
+        <StyledParagraph>
+          <Subtitle>Spotted</Subtitle>
+          <p>A web application geared towards car enthusiasts. View and post photos of vehicles, locations of car meets, or buy/sell a vehicle on the marketplace. Follow people you know and more.</p>
+        </StyledParagraph>
+      </StyledDiv>
     </Main>
   );
 }

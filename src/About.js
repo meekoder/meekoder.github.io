@@ -71,7 +71,7 @@ function About() {
             <ListItem>I like to learn/try new things. Recently, I picked up skateboarding.</ListItem>
           </StyledList>
         </StyledParagraph>
-        <Selfie alt="picture of Meeko Rusdi" src="/selfie.jpg"></Selfie>
+        <Selfie alt="picture of Meeko Rusdi" src="/selfie.jpg" />
       </StyledDiv>
     </Main>
   );
