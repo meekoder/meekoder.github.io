@@ -99,7 +99,7 @@ const Contact = () => {
     <Main id="contact">
       <StyledDiv>   
         <Title>Get In Touch</Title>
-        <Text>I'm enthusiastically searching for new opportunites. Please feel free to reach out through email or connect with me on LinkedIn or Twitter!</Text>
+        <Text>I'm currently seeking new opportunites. Please feel free to reach out through email or connect with me on LinkedIn or Twitter!</Text>
       </StyledDiv>
       <Form method="POST">
         <NameEmail>
