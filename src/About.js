@@ -2,8 +2,23 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Main = styled.div`
-  width: 50%;
+  max-width: 900px;
   height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ .inner {
+    @media (min-width : 768px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 80%;
+    }
+    @media (min-width : 992px) {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      grid-gap: 50px;
+    }
+  }
 `;
 
 const Title = styled.p`
@@ -19,10 +34,6 @@ const Subtitle = styled.p`
   color: #747f97;
 `;
 
-const Text = styled.p`
-
-`;
-
 const ListItem = styled.li`
   margin-bottom: 10px;
   &::before {
@@ -31,18 +42,19 @@ const ListItem = styled.li`
   }
 `;
 
-const Selfie = styled.img`
-  height: 40%;
-  width: 40%;
+const Selfie = styled.div`
+  max-width: 300px;
+  align-self: center;
+  justify-self: center;
+  .img {
+    width: 100%;
+  }
 `;
 
-const StyledDiv = styled.div`
+const StyledP = styled.div`
   display: flex;
-  justify-content: space-between;
-`;
-
-const StyledParagraph = styled.div`
-  width: 55%;
+  flex-direction: column;
+  justify-content: space-evenly;
 `;
 
 const StyledList = styled.ul`
@@ -54,26 +66,31 @@ const StyledA = styled.a`
   color: #ace6d3;
 `;
 
-function About() {
+const About = () => {
   return (
     <Main id="about">
-      <Title>About Me</Title>     
-      <StyledDiv>
-        <StyledParagraph>
-          <Text>Hello! I'm Meeko.</Text>
-          <Text>I'm a 22 year old software engineer based in the San Francisco Bay Area who has a strong passion for writing clean, efficient and performant code. I enjoy building reactive websites and applications that provide aesthetic and user-friendly experiences.</Text>
-          <Text>While I was a <StyledA target="_blank" href="https://www.alamy.com/airman-meekoly-munoz-363rd-training-squadron-maintenance-management-analysis-student-is-a-native-of-bloomfield-new-jersey-and-represents-international-students-in-the-maintenance-management-analysis-course-at-sheppard-air-force-base-texas-sept-22-2017-these-students-learn-how-to-determine-the-cost-efficiency-of-air-force-maintenance-activities-they-collect-and-analyze-data-to-improve-operations-image222016272.html">data analyst</StyledA> for the US Air Force, I discovered that I loved using software to create robust solutions to practical problems. The opportunity to learn and grow that engineering gives is the reason why I love to code.</Text>
+      <div className="inner">
+        <div>
+          <Title>About Me</Title>     
+          <StyledP>
+          <p>Hello! I'm Meeko.</p>
+          <p>I'm a 22 year old software engineer based in the San Francisco Bay Area who has a strong passion for writing clean, efficient and performant code. I enjoy building reactive websites and applications that provide aesthetic and user-friendly experiences.</p>
+          <p>While I was a <StyledA target="_blank" href="https://www.alamy.com/airman-meekoly-munoz-363rd-training-squadron-maintenance-management-analysis-student-is-a-native-of-bloomfield-new-jersey-and-represents-international-students-in-the-maintenance-management-analysis-course-at-sheppard-air-force-base-texas-sept-22-2017-these-students-learn-how-to-determine-the-cost-efficiency-of-air-force-maintenance-activities-they-collect-and-analyze-data-to-improve-operations-image222016272.html">data analyst</StyledA> for the US Air Force, I discovered that I loved using software to create robust solutions to practical problems. The opportunity to learn and grow that engineering gives is the reason why I love to code.</p>
+            </StyledP>
           <Subtitle>Other things I'm Into</Subtitle>
           <StyledList>
             <ListItem>I've been snowboarding since the age of 10.</ListItem>
+            <ListItem>Cars. I hope to one day own a GTR R32.</ListItem>
             <ListItem>I play League of Legends and Mobile Legends.</ListItem>
             <ListItem>I like to learn/try new things. Recently, I picked up skateboarding.</ListItem>
           </StyledList>
-        </StyledParagraph>
-        <Selfie alt="picture of Meeko Rusdi" src="/selfie.jpg" />
-      </StyledDiv>
+        </div>
+        <Selfie> 
+          <img alt="Meeko Rusdi" src="/selfie.jpg" className="img" />
+        </Selfie>
+      </div>
     </Main>
   );
-}
+};
 
 export default About;

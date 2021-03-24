@@ -2,8 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
+  @media only screen and (min-width : 768px) {
+    width: 75%;
+  }
+  @media only screen and (min-width : 992px) {
+    width: 50%;
+  }
   height: 90vh;
-  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;

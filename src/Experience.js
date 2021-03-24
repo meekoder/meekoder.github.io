@@ -2,7 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Main = styled.div`
-  width: 50%;
+  @media only screen and (min-width : 768px) {
+    width: 90%;
+  }
+  @media only screen and (min-width : 992px) {
+    width: 50%;
+  }
   height: 100vh;
 `;
 
