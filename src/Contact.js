@@ -73,7 +73,6 @@ const Message = styled.textarea`
 `;
 
 const Send = styled.button`
-  width: 10%;
   cursor: pointer;
   border: 1px solid #ace6d3;
   border-radius: 5px;
