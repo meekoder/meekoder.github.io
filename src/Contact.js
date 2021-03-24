@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import Social from './Social';
 
 const Main = styled.div`
-  @media only screen and (min-width : 768px) {
+  @media (min-width : 768px) {
     width: 90%;
   }
-  @media only screen and (min-width : 992px) {
+  @media (min-width : 992px) {
     width: 50%;
   }
   height: 100vh;

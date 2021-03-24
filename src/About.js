@@ -16,7 +16,7 @@ const Main = styled.div`
     @media (min-width : 992px) {
       display: grid;
       grid-template-columns: 3fr 2fr;
-      grid-gap: 50px;
+      grid-gap: 70px;
     }
   }
 `;
