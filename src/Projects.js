@@ -11,7 +11,7 @@ const Main = styled.div`
 
 const Title = styled.p`
   color: #ace6d3;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: bold;
   align-self: start;
 `;
@@ -40,7 +40,7 @@ const StyledDiv = styled.div`
 `;
 
 const Subtitle = styled.p`
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   color: #747f97;
 `;

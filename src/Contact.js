@@ -44,9 +44,16 @@ const Form = styled.form`
 
 const NameEmail = styled.div`
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin: 1em;
+  @media (min-width : 768px) {
+    display: grid;
+    gap: 10px;
+  }
+  @media (min-width : 992px) {
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    gap: 20px;
+  }
+  justify-items: stretch;
 `;
 
 const Input = styled.input`
@@ -56,7 +63,6 @@ const Input = styled.input`
   outline: none;
   padding: 0 2%;
   height: 40px;
-  width: 45%;
   line-height: 40px;
   border: 0;
 `;
@@ -75,6 +81,7 @@ const Message = styled.textarea`
   outline: none;
   overflow: auto;
   margin-bottom: 1em;
+  margin-top: 1em;
 `;
 
 const Send = styled.button`

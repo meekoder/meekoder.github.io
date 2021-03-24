@@ -16,14 +16,14 @@ const Main = styled.div`
     @media (min-width : 992px) {
       display: grid;
       grid-template-columns: 3fr 2fr;
-      grid-gap: 70px;
+      gap: 70px;
     }
   }
 `;
 
 const Title = styled.p`
   color: #ace6d3;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: bold;
 `;
 
