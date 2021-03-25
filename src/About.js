@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const Main = styled.div`
   max-width: 900px;
-  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,14 +11,12 @@ const Main = styled.div`
     grid-template-columns: 1fr;
     width: 90%;
     @media (min-width : 992px) {
+      height: 80vh;
       width: 80%;
       grid-template-columns: 3fr 2fr;
       gap: 70px;
     }
   }
-`;
-
-const Subtitle = styled.p`
 `;
 
 const ListItem = styled.li`
@@ -67,7 +64,7 @@ const About = () => {
           <p>I'm a 22 year old software engineer based in the San Francisco Bay Area who has a strong passion for writing clean, efficient and performant code. I enjoy building reactive websites and applications that provide aesthetic and user-friendly experiences.</p>
           <p>While I was a <StyledA target="_blank" href="https://www.alamy.com/airman-meekoly-munoz-363rd-training-squadron-maintenance-management-analysis-student-is-a-native-of-bloomfield-new-jersey-and-represents-international-students-in-the-maintenance-management-analysis-course-at-sheppard-air-force-base-texas-sept-22-2017-these-students-learn-how-to-determine-the-cost-efficiency-of-air-force-maintenance-activities-they-collect-and-analyze-data-to-improve-operations-image222016272.html">data analyst</StyledA> for the US Air Force, I discovered that I loved using software to create robust solutions to practical problems. The opportunity to learn and grow that engineering gives is the reason why I love to code.</p>
             </StyledP>
-          <Subtitle className="subtitle">Other things I'm Into</Subtitle>
+          <p className="subtitle">Other things I'm Into</p>
           <StyledList className="text">
             <ListItem>I've been snowboarding since the age of 10.</ListItem>
             <ListItem>Cars. I hope to one day own a GTR R32.</ListItem>

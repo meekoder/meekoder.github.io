@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
 
   .text {
     font-size: 50px;
+    margin-top: 0;
     @media (min-width : 992px) {
       font-size: 18px;
     }

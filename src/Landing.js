@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
-  width: 75%;
+  width: 85%;
   height: 100vh;
   display: flex;
   flex-direction: column;
