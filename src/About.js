@@ -19,14 +19,6 @@ const Main = styled.div`
   }
 `;
 
-const ListItem = styled.li`
-  margin-bottom: 10px;
-  &::before {
-    content: '▶';
-    margin: 0 10px;
-  }
-`;
-
 const Selfie = styled.div`
   align-self: center;
   justify-self: center;
@@ -42,10 +34,6 @@ const StyledP = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-`;
-
-const StyledList = styled.ul`
-  list-style-type: none;
 `;
 
 const StyledA = styled.a`
@@ -65,12 +53,12 @@ const About = () => {
           <p>While I was a <StyledA target="_blank" href="https://www.alamy.com/airman-meekoly-munoz-363rd-training-squadron-maintenance-management-analysis-student-is-a-native-of-bloomfield-new-jersey-and-represents-international-students-in-the-maintenance-management-analysis-course-at-sheppard-air-force-base-texas-sept-22-2017-these-students-learn-how-to-determine-the-cost-efficiency-of-air-force-maintenance-activities-they-collect-and-analyze-data-to-improve-operations-image222016272.html">data analyst</StyledA> for the US Air Force, I discovered that I loved using software to create robust solutions to practical problems. The opportunity to learn and grow that engineering gives is the reason why I love to code.</p>
             </StyledP>
           <p className="subtitle">Other things I'm Into</p>
-          <StyledList className="text">
-            <ListItem>I've been snowboarding since the age of 10.</ListItem>
-            <ListItem>Cars. I hope to one day own a GTR R32.</ListItem>
-            <ListItem>I play League of Legends and Mobile Legends.</ListItem>
-            <ListItem>I like to learn/try new things. Recently, I picked up skateboarding.</ListItem>
-          </StyledList>
+          <ul className="list text">
+            <li className="listItem">I've been snowboarding since the age of 10</li>
+            <li className="listItem">Cars! I hope to one day own a GTR R32</li>
+            <li className="listItem">I play League of Legends and Mobile Legends</li>
+            <li className="listItem">I like to learn/try new things. Recently, I picked up skateboarding</li>
+          </ul>
         </div>
         <Selfie> 
           <img alt="Meeko Rusdi" src="/selfie.jpg" className="img" />

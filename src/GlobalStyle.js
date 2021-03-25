@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .text {
-    font-size: 50px;
+    font-size: 30px;
     margin-top: 0;
     @media (min-width : 992px) {
       font-size: 18px;
@@ -32,6 +32,35 @@ const GlobalStyle = createGlobalStyle`
       font-size: 20px;
     }
   }
+
+  .list {
+    list-style-type: none;
+  }
+
+  .arrow {
+    margin-bottom: 10px;
+    &::before {
+      content: '▶';
+      color: #ace6d3;
+      margin: 30px;
+      @media (min-width : 992px) {
+        margin: 0 10px;
+      }
+    }
+  }
+
+  .listItem {
+    margin-bottom: 10px;
+    &::before {
+      content: '♦';
+      color: #ace6d3;
+      margin: 50px;
+      @media (min-width : 992px) {
+        margin: 0 10px;
+      }
+    }
+  }
+
 `;
 
 export default GlobalStyle;
