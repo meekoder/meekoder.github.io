@@ -6,6 +6,7 @@ import About from './About';
 import Experience from './Experience';
 import Projects from './Projects';
 import Contact from './Contact';
+import GlobalStyle from './GlobalStyle';
 
 const Main = styled.div`
   background-color: #2f343f;
@@ -23,6 +24,7 @@ const Content = styled.div`
 const App = () => {
   return (
     <Main>
+      <GlobalStyle />
       <Nav />
       <Content>
         <Landing />

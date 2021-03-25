@@ -6,22 +6,24 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 70%;
-`;
-
-const Title = styled.p`
-  color: #ace6d3;
-  font-size: 32px;
-  font-weight: bold;
-  align-self: start;
+  width: 90%;
+  @media (min-width : 992px) {
+    width: 70%;
+  }
+  .title {
+    align-self: start;
+  }
 `;
 
 const Picture = styled.img`
-  max-width: 350px;
+  max-width: 700px;
   align-self: center;
   justify-self: center;
   .img {
     width: 100%;
+  }
+  @media (min-width : 992px) {
+    max-width: 300px;
   }
 `;
 
@@ -36,12 +38,6 @@ const StyledDiv = styled.div`
     }
 `;
 
-const Subtitle = styled.p`
-  font-size: 25px;
-  font-weight: bold;
-  color: #747f97;
-`;
-
 const StyledParagraph = styled.div`
   display: flex;
   flex-direction: column;
@@ -50,21 +46,21 @@ const StyledParagraph = styled.div`
 const Projects = () => {
   return (
     <Main id="projects">
-      <Title>Some of My Projects</Title>
-      <StyledDiv>
+      <p className="title">Some of My Projects</p>
+      <StyledDiv className="text">
         <Picture alt="spotted landing page" src="/spotted.png" className="img" />
         <StyledParagraph>
-          <Subtitle>Spotted</Subtitle>
+          <p className="subtitle">Spotted</p>
           <p>An application geared towards car enthusiasts. View and post photos of vehicles, locations of car meets, or buy/sell a vehicle on the marketplace. Follow people you know and more.</p>
         </StyledParagraph>
         <Picture alt="e-commerce reviews" src="/ecom.png" className="img" />
         <StyledParagraph>
-          <Subtitle>E-Commerce Store</Subtitle>
+          <p className="subtitle">E-Commerce Store</p>
           <p>A web application built by a team of engineers that delivers a modular UI/UX for an E-commerce store. View photos of products, related items, and user reviews. Filter or sort reviews and add items to your cart.</p>
         </StyledParagraph>
         <Picture alt="vacation rental marketplace" src="/vacation.png" className="img" />
         <StyledParagraph>
-          <Subtitle>Vacation Rental Marketplace</Subtitle>
+          <p className="subtitle">Vacation Rental Marketplace</p>
           <p>Primarily a backend focused application whose goal was to optimize and scale a system architecture for an online vacation rental marketplace. Microservices were scaled using NGINX, stress tested with Loader.io, and New Relic was utilized to determine bottlenecks.</p>
         </StyledParagraph>
       </StyledDiv>

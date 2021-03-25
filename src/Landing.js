@@ -14,23 +14,31 @@ const StyledDiv = styled.div`
 
 const Greeting = styled.p`
   user-select: none;
-  font-size: 30px; 
-  font-size: clamp(20px, 8vw, 40px);
+  font-size: 50px;
   margin-bottom: 0;
   color: #ace6d3;
+  @media (min-width : 992px) {
+    font-size: 30px;
+  }
 `;
 
 const Name = styled.p`
   margin: 0;
-  font-size: clamp(40px, 8vw, 80px);
+  font-size: 110px;
   font-weight: bold;
   color: #f3f4f5;
+  @media (min-width : 992px) {
+    font-size: 80px;
+  }
 `;
 
 const Intro = styled.p`
   user-select: none;
-  font-size: clamp(25px, 5vw, 32px);
+  font-size: 45px;
   color: #747f97;
+  @media (min-width : 992px) {
+    font-size: 25px;
+  }
 `;
 
 const Landing = () => {

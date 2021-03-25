@@ -10,25 +10,16 @@ const Main = styled.div`
  .inner {
     display: grid;
     grid-template-columns: 1fr;
-    width: 80%;
+    width: 90%;
     @media (min-width : 992px) {
+      width: 80%;
       grid-template-columns: 3fr 2fr;
       gap: 70px;
     }
   }
 `;
 
-const Title = styled.p`
-  color: #ace6d3;
-  font-size: clamp(26px, 5vw, 32px);
-  font-weight: bold;
-`;
-
 const Subtitle = styled.p`
-  text-align: left;
-  font-size: 20px;
-  font-weight: bold;
-  color: #747f97;
 `;
 
 const ListItem = styled.li`
@@ -40,11 +31,13 @@ const ListItem = styled.li`
 `;
 
 const Selfie = styled.div`
-  max-width: 300px;
   align-self: center;
   justify-self: center;
   .img {
     width: 100%;
+  }
+  @media (min-width : 992px) {
+    max-width: 300px;
   }
 `;
 
@@ -68,14 +61,14 @@ const About = () => {
     <Main id="about">
       <div className="inner">
         <div>
-          <Title>About Me</Title>     
-          <StyledP>
+          <p className="title">About Me</p>     
+          <StyledP className="text">
           <p>Hello! I'm Meeko.</p>
           <p>I'm a 22 year old software engineer based in the San Francisco Bay Area who has a strong passion for writing clean, efficient and performant code. I enjoy building reactive websites and applications that provide aesthetic and user-friendly experiences.</p>
           <p>While I was a <StyledA target="_blank" href="https://www.alamy.com/airman-meekoly-munoz-363rd-training-squadron-maintenance-management-analysis-student-is-a-native-of-bloomfield-new-jersey-and-represents-international-students-in-the-maintenance-management-analysis-course-at-sheppard-air-force-base-texas-sept-22-2017-these-students-learn-how-to-determine-the-cost-efficiency-of-air-force-maintenance-activities-they-collect-and-analyze-data-to-improve-operations-image222016272.html">data analyst</StyledA> for the US Air Force, I discovered that I loved using software to create robust solutions to practical problems. The opportunity to learn and grow that engineering gives is the reason why I love to code.</p>
             </StyledP>
-          <Subtitle>Other things I'm Into</Subtitle>
-          <StyledList>
+          <Subtitle className="subtitle">Other things I'm Into</Subtitle>
+          <StyledList className="text">
             <ListItem>I've been snowboarding since the age of 10.</ListItem>
             <ListItem>Cars. I hope to one day own a GTR R32.</ListItem>
             <ListItem>I play League of Legends and Mobile Legends.</ListItem>
