@@ -66,17 +66,14 @@ const NameEmail = styled.div`
 `;
 
 const Input = styled.input`
-  border-radius: 10px;
+  border-radius: 5px;
   outline: none;
   padding: 0 2%;
   border: 0;
   height: 100px;
   line-height: 1.4em;
   font-size: 2.5em;
-  margin-top: 30px;
   @media (min-width : 992px) {
-    border-radius: 5px;
-    margin-top: 10px;
     font-size: 1em;
     height: 40px;
     line-height: 40px;
@@ -87,7 +84,7 @@ const Message = styled.textarea`
   font-family: inherit;
   font-size: 2.5em;
   border: 0;
-  border-radius: 10px;
+  border-radius: 5px;
   resize: none;
   width: 96%;
   height: 400px;
@@ -96,9 +93,8 @@ const Message = styled.textarea`
   outline: none;
   overflow: auto;
   margin-bottom: 1em;
-  margin-top: 40px;
+  margin-top: 30px;
   @media (min-width : 992px) {
-    border-radius: 5px;
     margin-top: 1em;
     width: 98%;
     font-size: 1em;
@@ -110,9 +106,9 @@ const Message = styled.textarea`
 
 const Send = styled.button`
   cursor: pointer;
-  border: 2px solid #ace6d3;
-  border-radius: 10px;
-  padding: 1.5rem 2rem;
+  border: 1px solid #ace6d3;
+  border-radius: 5px;
+  padding: 1.5rem 1.5rem;
   color: #f3f4f5;
   font-size: 50px;
   background-color: transparent;
@@ -128,8 +124,6 @@ const Send = styled.button`
     display: none !important;
   }
   @media (min-width : 992px) {
-    border: 1px solid #ace6d3;
-    border-radius: 5px;
     padding: 0.75rem 1rem;
     font-size: 16px;
   }
