@@ -20,7 +20,7 @@ const Content = styled.div`
   justify-content: center;
 `;
 
-function App() {
+const App = () => {
   return (
     <Main>
       <Nav />
@@ -33,6 +33,6 @@ function App() {
       </Content>
     </Main>
   );
-}
+};
 
 export default App;

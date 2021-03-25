@@ -2,39 +2,38 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
-  @media (min-width : 768px) {
-    width: 75%;
-  }
-  @media (min-width : 992px) {
-    width: 50%;
-  }
-  height: 90vh;
+  width: 75%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media (min-width : 992px) {
+    width: 50%;
+  }
 `;
 
 const Greeting = styled.p`
   user-select: none;
   font-size: 30px; 
+  font-size: clamp(20px, 8vw, 40px);
   margin-bottom: 0;
   color: #ace6d3;
 `;
 
 const Name = styled.p`
   margin: 0;
-  font-size: 80px;
+  font-size: clamp(40px, 8vw, 80px);
   font-weight: bold;
   color: #f3f4f5;
 `;
 
 const Intro = styled.p`
   user-select: none;
-  font-size: 25px;
+  font-size: clamp(25px, 5vw, 32px);
   color: #747f97;
 `;
 
-function Landing() {
+const Landing = () => {
   return (
     <StyledDiv>
       <Greeting>Hi, my name is</Greeting>     
@@ -42,6 +41,6 @@ function Landing() {
       <Intro>I'm a software engineer.</Intro>
     </StyledDiv>
   );
-}
+};
 
 export default Landing;

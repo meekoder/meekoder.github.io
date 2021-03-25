@@ -26,13 +26,10 @@ const Picture = styled.img`
 `;
 
 const StyledDiv = styled.div`
-    @media (min-width : 768px) {
-      display: grid;
-      grid-template-columns: 1fr;
-      width: 80%;
-    }
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80%;
     @media (min-width : 992px) {
-      display: grid;
       grid-template-columns: 2fr 2fr;
       grid-template-rows: 3fr 3fr 3fr;
       gap: 40px 70px;

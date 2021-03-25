@@ -8,13 +8,10 @@ const Main = styled.div`
   flex-direction: column;
   align-items: center;
  .inner {
-    @media (min-width : 768px) {
-      display: grid;
-      grid-template-columns: 1fr;
-      width: 80%;
-    }
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80%;
     @media (min-width : 992px) {
-      display: grid;
       grid-template-columns: 3fr 2fr;
       gap: 70px;
     }
@@ -23,7 +20,7 @@ const Main = styled.div`
 
 const Title = styled.p`
   color: #ace6d3;
-  font-size: 32px;
+  font-size: clamp(26px, 5vw, 32px);
   font-weight: bold;
 `;
 
