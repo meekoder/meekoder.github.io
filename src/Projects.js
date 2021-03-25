@@ -5,13 +5,14 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
   @media (min-width : 992px) {
     height: 100vh;
     width: 70%;
   }
   .title {
-    align-self: start;
+    @media (min-width : 992px) {
+      align-self: start;
+    }
   }
   .subtitle {
     margin-top: 20px;
@@ -19,7 +20,7 @@ const Main = styled.div`
 `;
 
 const Picture = styled.img`
-  max-width: 700px;
+  max-width: 800px;
   align-self: center;
   justify-self: center;
   .img {

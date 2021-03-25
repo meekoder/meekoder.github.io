@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
 const SocialList = styled.ul`
   display: flex;
   align-items: center;
-  margin: 0;
+  margin: 3.5rem;
   padding: 0;
   list-style: none;
 
@@ -24,18 +24,29 @@ const SocialList = styled.ul`
   li {
     a {
       padding: 2em;
-
+      margin: 3rem;
 
       svg {
-        width: 1.5em;
-        height: 1.5em;
+        width: 5em;
+        height: 5em;
         &:hover,
         &:focus {
           transform: translateY(-3px);
           transition: transform .3s cubic-bezier(.3,0,.45,1);
         }
+        @media (min-width : 992px) {
+          width: 1.5em;
+          height: 1.5em;
+        }
+      }
+
+      @media (min-width : 992px) {
+        margin: 0;
       }
     }
+  }
+  @media (min-width : 992px) {
+    margin: 0;
   }
 `;
 
