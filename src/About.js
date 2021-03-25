@@ -6,16 +6,21 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
  .inner {
     display: grid;
     grid-template-columns: 1fr;
     width: 90%;
     @media (min-width : 992px) {
-      height: 80vh;
+      height: 100vh;
       width: 80%;
       grid-template-columns: 3fr 2fr;
       gap: 70px;
     }
+  }
+
+  p {
+    margin-bottom: 0;
   }
 `;
 

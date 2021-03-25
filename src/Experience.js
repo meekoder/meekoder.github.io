@@ -2,10 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Main = styled.div`
-  width: 90%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100vh;
-  @media (min-width : 992px) {
-    width: 50%;
+ .inner {
+    width: 90%;
+    @media (min-width : 992px) {
+      height: 100vh;
+      width: 80%;
+      gap: 70px;
+    }
   }
   p.text {
     font-weight: bold;
@@ -54,6 +62,7 @@ const Date = styled.p`
 const Experience = () => {
   return (
     <Main id="experience">
+      <div className="inner">
       <p className="title">Where I've Worked</p>
       <Nav>
         <NavCompany>US Air Force</NavCompany>
@@ -67,8 +76,9 @@ const Experience = () => {
         <li className="arrow">Provided daily/weekly/monthly maintenance metric data validation, reporting, and trend analysis to leadership</li>
         <li className="arrow">Spearheaded the data integrity program responsible for leading a team of over 170+ personnel</li>
       </ul>
+      </div>
     </Main>
   );
-}
+};
 
 export default Experience;

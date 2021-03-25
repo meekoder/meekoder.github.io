@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .title {
+    margin: 100px 0 0 0;
     color: #ace6d3;
     font-weight: bold;
     font-size: 80px;
@@ -27,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
     text-align: left;
     font-weight: bold;
     color: #747f97;
-    font-size: 60px;
+    font-size: 50px;
     @media (min-width : 992px) {
       font-size: 20px;
     }
@@ -60,7 +61,6 @@ const GlobalStyle = createGlobalStyle`
       }
     }
   }
-
 `;
 
 export default GlobalStyle;

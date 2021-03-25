@@ -20,6 +20,7 @@ const Main = styled.div`
 `;
 
 const Picture = styled.img`
+  margin-top: 50px;
   max-width: 800px;
   align-self: center;
   justify-self: center;
@@ -28,6 +29,7 @@ const Picture = styled.img`
   }
   @media (min-width : 992px) {
     max-width: 300px;
+    margin: 0;
   }
 `;
 
