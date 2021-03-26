@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, setState } from 'react';
+import * as emailjs from 'emailjs-com';
 import styled from 'styled-components';
 import Social from './Social';
 
@@ -85,7 +86,7 @@ const Input = styled.input`
   @media (min-width : 992px) {
     width: auto;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 0.5em;
     font-size: 1em;
     height: 40px;
     line-height: 40px;
@@ -109,7 +110,7 @@ const Message = styled.textarea`
   @media (min-width : 992px) {
     width: -webkit-fill-available;
     border-radius: 5px;
-    margin-top: 1em;
+    margin-top: 0.5em;
     font-size: 1em;
     padding: 1%;
     height: 10em;
@@ -157,6 +158,51 @@ const Footer = styled.div`
 `;
 
 const Contact = () => {
+  const [info, setInfo] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const handleChange = (param, e) => {
+    setInfo({ ...info, [param] : e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(info)
+    const { name, email, subject, message } = info;
+    const templateParams = {
+      from_name: name,
+      email,
+      to_name: 'Meeko',
+      subject: subject,
+      message_html: message,
+    };
+
+    emailjs
+      .send(
+        'service_nmm7e97',
+        'template_emmilo3',
+        templateParams,
+        'user_YLpfBi0BUMmnGHush9hVq'
+      )
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+    ;
+
+    setInfo({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    });
+  };
+
   return (
     <Main id="contact">
       <div className="inner">
@@ -165,18 +211,18 @@ const Contact = () => {
           <Text>I'm currently seeking new opportunites.</Text>
           <Text>Please feel free to reach out through email or connect with me on LinkedIn or Twitter!</Text>
         </StyledDiv>
-        <form method="POST">
+        <form>
           <NameEmail>
-            <Input type="text" placeholder="Name" />
-            <Input type="email" placeholder="Email" />
+            <Input type="text" placeholder="Name" value={info.name} onChange={(e) => handleChange('name', e)} />
+            <Input type="email" placeholder="Email" value={info.email} onChange={(e) => handleChange('email', e)} />
           </NameEmail>
           <Subject>
-            <Input type="text" placeholder="Subject" className="subject" />
+            <Input type="text" placeholder="Subject" className="subject"  value={info.subject} onChange={(e) => handleChange('subject', e)} />
           </Subject>
-          <Message placeholder="Your Message"></Message>
+          <Message placeholder="Your Message" value={info.message} onChange={(e) => handleChange('message', e)}></Message>
         </form>
         <Button>
-          <Send type="submit">Send</Send>
+          <Send type="submit" onClick={handleSubmit}>Send</Send>
         </Button>
       </div>
       <Footer>
