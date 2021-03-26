@@ -8,8 +8,8 @@
       "type": "image/png"
     }
   ],
-  "start_url": "https://meekoly.com",
+  "start_url": "/index.html",
   "display": "standalone",
-  "theme_color": "AAF0D1",
+  "theme_color": "#AAF0D1",
   "background_color": "#2f343f"
 }
