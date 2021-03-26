@@ -24,6 +24,13 @@ const Main = styled.div`
       font-size: 50px;
     }
   }
+
+  .footer {
+    font-size: 25px;
+    @media (min-width : 992px) {
+      font-size: 12px;
+    }
+  }
 `;
 
 const StyledDiv = styled.div`
@@ -46,21 +53,26 @@ const Text = styled.p`
 `;
 
 const NameEmail = styled.div`
-  width: 100%;
-  @media (min-width : 768px) {
-    display: grid;
-    gap: 10px;
-  }
   @media (min-width : 992px) {
     display: grid;
-    grid-template-columns: 5fr 5fr;
-    gap: 20px;
+    grid-template-columns: 3fr 3fr;
+    gap: 10px;
   }
-  justify-items: stretch;
+`;
+
+const Subject = styled.div`
+  @media (min-width : 992px) {
+    display: grid;
+    grid-template-columns: 3fr;
+    .subject {
+      padding: 0 1%;
+    }
+  }
 `;
 
 const Input = styled.input`
   border-radius: 10px;
+  width: 100%;
   outline: none;
   padding: 0 2%;
   border: 0;
@@ -69,6 +81,7 @@ const Input = styled.input`
   font-size: 2.5em;
   margin-top: 30px;
   @media (min-width : 992px) {
+    width: auto;
     border-radius: 5px;
     margin-top: 10px;
     font-size: 1em;
@@ -83,7 +96,7 @@ const Message = styled.textarea`
   border: 0;
   border-radius: 10px;
   resize: none;
-  width: 96%;
+  width: 100%;
   height: 400px;
   padding: 2%;
   line-height: 1.4em;
@@ -92,9 +105,9 @@ const Message = styled.textarea`
   margin-bottom: 1em;
   margin-top: 40px;
   @media (min-width : 992px) {
+    width: -webkit-fill-available;
     border-radius: 5px;
     margin-top: 1em;
-    width: 98%;
     font-size: 1em;
     padding: 1%;
     height: 10em;
@@ -134,6 +147,13 @@ const Button = styled.div`
   justify-content: center;
 `;
 
+const Footer = styled.div`
+  display: flex;
+  height: 30%;
+  justify-content: center;
+  align-items: flex-end;
+`;
+
 const Contact = () => {
   return (
     <Main id="contact">
@@ -148,6 +168,9 @@ const Contact = () => {
             <Input type="text" placeholder="Name" />
             <Input type="email" placeholder="Email" />
           </NameEmail>
+          <Subject>
+            <Input type="text" placeholder="Subject" className="subject" />
+          </Subject>
           <Message placeholder="Your Message"></Message>
         </form>
         <Button>
@@ -155,6 +178,9 @@ const Contact = () => {
         </Button>
         <Social />
       </div>
+      <Footer>
+        <p className="footer">© 2021 Meekoly Rusdi.</p>
+      </Footer>
     </Main>
   );
 };
