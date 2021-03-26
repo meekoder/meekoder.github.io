@@ -80,7 +80,7 @@ const Input = styled.input`
   padding: 0 2%;
   border: 0;
   height: 100px;
-  line-height: 1.4em;
+  line-height: 1.6em;
   font-size: 2.5em;
   margin-top: 30px;
   @media (min-width : 992px) {
@@ -89,20 +89,20 @@ const Input = styled.input`
     margin-top: 0.5em;
     font-size: 1em;
     height: 40px;
-    line-height: 40px;
+    line-height: 1.6em;
   }
 `;
 
 const Message = styled.textarea`
   font-family: inherit;
-  font-size: 2.5em;
+  font-size: 1.5em;
   border: 0;
   border-radius: 10px;
   resize: none;
   width: 100%;
   height: 400px;
   padding: 2%;
-  line-height: 1.4em;
+  line-height: 2em;
   outline: none;
   overflow: auto;
   margin-bottom: 1em;
@@ -114,7 +114,13 @@ const Message = styled.textarea`
     font-size: 1em;
     padding: 1%;
     height: 10em;
-    line-height: 40px;
+    line-height: 1.6em;
+  }
+  &::placeholder {
+    font-size: 40px;
+    @media (min-width : 992px) {
+      font-size: 1em;
+    }
   }
 `;
 
