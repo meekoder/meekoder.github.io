@@ -15,11 +15,6 @@ const SocialList = styled.ul`
   padding: 0;
   list-style: none;
 
-  &:after {
-    content: '';
-    height: 5em;
-  }
-
   li {
     a {
       padding: 2em;
@@ -27,7 +22,6 @@ const SocialList = styled.ul`
 
       svg {
         width: 5em;
-        height: 5em;
         &:hover,
         &:focus {
           transform: translateY(-3px);
@@ -35,7 +29,6 @@ const SocialList = styled.ul`
         }
         @media (min-width : 992px) {
           width: 1.5em;
-          height: 1.5em;
         }
       }
 

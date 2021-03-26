@@ -26,6 +26,8 @@ const Main = styled.div`
   }
 
   .footer {
+    width: 100%;
+    text-align: center;
     font-size: 25px;
     @media (min-width : 992px) {
       font-size: 12px;
@@ -149,9 +151,9 @@ const Button = styled.div`
 
 const Footer = styled.div`
   display: flex;
-  height: 30%;
-  justify-content: center;
-  align-items: flex-end;
+  height: -webkit-fill-available;
+  flex-direction: column;
+  justify-content: flex-end;
 `;
 
 const Contact = () => {
@@ -176,9 +178,9 @@ const Contact = () => {
         <Button>
           <Send type="submit">Send</Send>
         </Button>
-        <Social />
       </div>
       <Footer>
+        <Social />
         <p className="footer">© 2021 Meekoly Rusdi.</p>
       </Footer>
     </Main>
