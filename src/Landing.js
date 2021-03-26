@@ -8,7 +8,7 @@ const StyledDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   @media (min-width : 992px) {
-    width: 50%;
+    width: 60%;
   }
 `;
 

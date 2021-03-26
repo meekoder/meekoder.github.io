@@ -76,19 +76,19 @@ const Projects = () => {
       <div className="inner">
         <p className="title">Some of My Projects</p>
         <StyledDiv>
-          <Picture alt="spotted landing page" src="/spotted.png" className="img" />
+          <Picture alt="spotted landing page" src="/images/spotted.png" className="img" />
           <StyledParagraph>
             <p className="subtitle">Spotted</p>
             <Highlight />
             <p className="text">An application geared towards car enthusiasts. View and post photos of vehicles, locations of car meets, or buy/sell a vehicle on the marketplace. Follow people you know and more.</p>
           </StyledParagraph>
-          <Picture alt="e-commerce reviews" src="/ecom.png" className="img" />
+          <Picture alt="e-commerce reviews" src="/images/ecom.png" className="img" />
           <StyledParagraph>
             <p className="subtitle">E-Commerce Store</p>
             <Highlight />
             <p className="text">A web application built by a team of engineers that delivers a modular UI/UX for an E-commerce store. View photos of products, related items, and user reviews. Filter or sort reviews and add items to your cart.</p>
           </StyledParagraph>
-          <Picture alt="vacation rental marketplace" src="/vacation.png" className="img" />
+          <Picture alt="vacation rental marketplace" src="/images/vacation.png" className="img" />
           <StyledParagraph>
             <p className="subtitle">Vacation Rental Marketplace</p>
             <Highlight />

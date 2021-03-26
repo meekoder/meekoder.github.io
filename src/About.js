@@ -15,7 +15,7 @@ const Main = styled.div`
     @media (min-width : 992px) {
       height: 100vh;
       width: 80%;
-      grid-template-columns: 3fr 2fr;
+      grid-template-columns: 4fr 2fr;
       gap: 70px;
     }
   }
@@ -34,7 +34,7 @@ const Selfie = styled.div`
     width: 100%;
   }
   @media (min-width : 992px) {
-    max-width: 300px;
+    max-width: 400px;
   }
 `;
 
@@ -58,7 +58,7 @@ const About = () => {
           <StyledP className="text">
           <p>Hello! I'm Meeko.</p>
           <p>I'm a 22 year old software engineer based in the San Francisco Bay Area who has a strong passion for writing clean, efficient and performant code. I enjoy building reactive websites and applications that provide aesthetic and user-friendly experiences.</p>
-          <p>While I was a <StyledA target="_blank" href="https://www.alamy.com/airman-meekoly-munoz-363rd-training-squadron-maintenance-management-analysis-student-is-a-native-of-bloomfield-new-jersey-and-represents-international-students-in-the-maintenance-management-analysis-course-at-sheppard-air-force-base-texas-sept-22-2017-these-students-learn-how-to-determine-the-cost-efficiency-of-air-force-maintenance-activities-they-collect-and-analyze-data-to-improve-operations-image222016272.html">data analyst</StyledA> for the US Air Force, I discovered that I loved using software to create robust solutions to practical problems. The opportunity to learn and grow that engineering gives is the reason why I love to code.</p>
+          <p>While I was a <StyledA target="_blank" href="https://www.alamy.com/airman-meekoly-munoz-363rd-training-squadron-maintenance-management-analysis-student-is-a-native-of-bloomfield-new-jersey-and-represents-international-students-in-the-maintenance-management-analysis-course-at-sheppard-air-force-base-texas-sept-22-2017-these-students-learn-how-to-determine-the-cost-efficiency-of-air-force-maintenance-activities-they-collect-and-analyze-data-to-improve-operations-image222016272.html">data analyst</StyledA> for the US Air Force, I discovered that I enjoy using software to create robust solutions to practical problems. I love that engineering provides the continuous opportunity to learn and grow.</p>
             </StyledP>
           <p className="subtitle">Other things I'm Into</p>
           <ul className="list text">
@@ -68,7 +68,7 @@ const About = () => {
           </ul>
         </div>
         <Selfie> 
-          <img alt="Meeko Rusdi" src="/selfie.jpg" className="img" />
+          <img alt="Meeko Rusdi" src="/images/selfie.jpg" className="img" />
         </Selfie>
       </div>
     </Main>
