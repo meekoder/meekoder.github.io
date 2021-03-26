@@ -16,7 +16,7 @@ const Greeting = styled.p`
   user-select: none;
   font-size: 50px;
   margin-bottom: 0;
-  color: #ace6d3;
+  color: #AAF0D1;
   @media (min-width : 992px) {
     font-size: 30px;
   }

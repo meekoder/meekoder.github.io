@@ -5,7 +5,6 @@ import Icon from './icons/icon';
 
 const StyledDiv = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
 `;
 

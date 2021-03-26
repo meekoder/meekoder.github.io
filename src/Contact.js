@@ -3,14 +3,26 @@ import styled from 'styled-components';
 import Social from './Social';
 
 const Main = styled.div`
-  width: 90%;
-  height: 100vh;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media (min-width : 992px) {
-    width: 50%;
+  height: 100vh;
+ .inner {
+    width: 90%;
+    @media (min-width : 992px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .title {
+    font-size: 100px;
+    @media (min-width : 992px) {
+      font-size: 50px;
+    }
   }
 `;
 
@@ -19,16 +31,6 @@ const StyledDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
-
-const Title = styled.p`
-  color: #ace6d3;
-  font-weight: bold;
-  margin: 0;
-  font-size: 100px;
-  @media (min-width : 992px) {
-    font-size: 50px;
-  }
 `;
 
 const Text = styled.p`
@@ -41,14 +43,6 @@ const Text = styled.p`
   @media (min-width : 992px) {
     font-size: 16px;
   }
-`;
-
-const Form = styled.form`
-  display: flex;
-  width:  100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 `;
 
 const NameEmail = styled.div`
@@ -135,23 +129,32 @@ const Send = styled.button`
   }
 `;
 
+const Button = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 const Contact = () => {
   return (
     <Main id="contact">
-      <StyledDiv>   
-        <Title>Get In Touch</Title>
-        <Text>I'm currently seeking new opportunites.</Text>
-        <Text>Please feel free to reach out through email or connect with me on LinkedIn or Twitter!</Text>
-      </StyledDiv>
-      <Form method="POST">
-        <NameEmail>
-          <Input type="text" placeholder="Name" />
-          <Input type="email" placeholder="Email" />
-        </NameEmail>
-        <Message placeholder="Your Message"></Message>
-      </Form>
-      <Send type="submit">Send</Send>
-      <Social />
+      <div className="inner">
+        <StyledDiv>   
+          <p className="title">Get In Touch</p>
+          <Text>I'm currently seeking new opportunites.</Text>
+          <Text>Please feel free to reach out through email or connect with me on LinkedIn or Twitter!</Text>
+        </StyledDiv>
+        <form method="POST">
+          <NameEmail>
+            <Input type="text" placeholder="Name" />
+            <Input type="email" placeholder="Email" />
+          </NameEmail>
+          <Message placeholder="Your Message"></Message>
+        </form>
+        <Button>
+          <Send type="submit">Send</Send>
+        </Button>
+        <Social />
+      </div>
     </Main>
   );
 };

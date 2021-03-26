@@ -10,6 +10,7 @@ const Main = styled.div`
  .inner {
     display: grid;
     grid-template-columns: 1fr;
+    align-items: center;
     width: 90%;
     @media (min-width : 992px) {
       height: 100vh;
@@ -20,13 +21,15 @@ const Main = styled.div`
   }
 
   p {
-    margin-bottom: 0;
+    margin: 25px 0px 0px 0px;
+    @media (min-width : 992px) {
+      margin-bottom: 5px;
+    }
   }
 `;
 
 const Selfie = styled.div`
   align-self: center;
-  justify-self: center;
   .img {
     width: 100%;
   }

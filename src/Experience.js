@@ -12,12 +12,14 @@ const Main = styled.div`
     @media (min-width : 992px) {
       height: 100vh;
       width: 80%;
-      gap: 70px;
     }
   }
   p.text {
     font-weight: bold;
     margin: 0;
+  }
+  .subtitle {
+    font-weight: normal;
   }
 `;
 
@@ -28,10 +30,6 @@ const Nav = styled.div`
   @media (min-width : 992px) {
     font-size: 20px;
   }
-`;
-
-const NavCompany = styled.p`
-  margin: 0;
 `;
 
 const NavBar = styled.div`
@@ -65,7 +63,7 @@ const Experience = () => {
       <div className="inner">
       <p className="title">Where I've Worked</p>
       <Nav>
-        <NavCompany>US Air Force</NavCompany>
+        <p className="subtitle">US Air Force</p>
         <NavBar />
       </Nav>
       <p className="text">Maintenance Data Analyst</p>

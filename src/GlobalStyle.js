@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
 
   .text {
     font-size: 30px;
-    margin-top: 0;
+    margin: 0;
     @media (min-width : 992px) {
       font-size: 18px;
     }
@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
   .title {
     margin: 100px 0 0 0;
-    color: #ace6d3;
+    color: #AAF0D1;
     font-weight: bold;
     font-size: 80px;
     @media (min-width : 992px) {
@@ -25,9 +25,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .subtitle {
-    text-align: left;
+    margin-bottom: 10px;
     font-weight: bold;
-    color: #747f97;
+    color: #ACE6D3;
     font-size: 50px;
     @media (min-width : 992px) {
       font-size: 20px;
