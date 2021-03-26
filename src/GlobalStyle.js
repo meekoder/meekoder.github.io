@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
 
   .list {
     list-style-type: none;
+    margin-bottom: 50px;
   }
 
   .arrow {

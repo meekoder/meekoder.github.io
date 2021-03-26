@@ -70,9 +70,9 @@ const Experience = () => {
       <Date>May 2017 — December 2019</Date>
       <ul className="list text">
         <li className="arrow">Managed Maintenance Information Systems that were critical to over 1K+ employees and $8.4B worth of aircraft</li>
-        <li className="arrow">Performed Maintenance Information System database management and ensured aircraft data accuracy</li>
+        <li className="arrow">Spearheaded the data integrity program and was responsible for leading a team of over 170+ personnel</li>
+        <li className="arrow">Performed Maintenance Information System database management to ensure aircraft data accuracy</li>
         <li className="arrow">Provided daily/weekly/monthly maintenance metric data validation, reporting, and trend analysis to leadership</li>
-        <li className="arrow">Spearheaded the data integrity program responsible for leading a team of over 170+ personnel</li>
       </ul>
       </div>
     </Main>
