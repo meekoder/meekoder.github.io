@@ -2,12 +2,9 @@ import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  *. {
-    line-height: 2em;
-  }
-
   .text {
     font-size: 30px;
+    line-height: 1.5em;
     margin: 0;
     @media (min-width : 992px) {
       font-size: 18px;
@@ -35,8 +32,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .list {
+    list-style-position: outside;
     list-style-type: none;
     margin-bottom: 50px;
+    text-indent: -2.5em;
+    @media (min-width : 992px) {
+      margin: 0 10px;
+      text-indent: -1.6em;
+    }
   }
 
   .arrow {
