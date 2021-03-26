@@ -65,7 +65,6 @@ const About = () => {
             <li className="listItem">I've been snowboarding since the age of 10</li>
             <li className="listItem">Cars! I hope to one day own a GTR R32</li>
             <li className="listItem">I play League of Legends and Mobile Legends</li>
-            <li className="listItem">I like to learn/try new things. Recently, I picked up skateboarding</li>
           </ul>
         </div>
         <Selfie> 
