@@ -1,4 +1,4 @@
-import React, { useState, setState } from 'react';
+import React, { useState } from 'react';
 import * as emailjs from 'emailjs-com';
 import styled from 'styled-components';
 import Social from './Social';
@@ -171,12 +171,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(info)
     const { name, email, subject, message } = info;
     const templateParams = {
       from_name: name,
-      email,
       to_name: 'Meeko',
+      email,
       subject: subject,
       message_html: message,
     };
