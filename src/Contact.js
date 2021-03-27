@@ -186,19 +186,18 @@ const Contact = () => {
       message_html: message,
     };
 
-    console.log('submitted')
-    // emailjs
-    //   .send(
-    //     'service_nmm7e97',
-    //     'template_emmilo3',
-    //     templateParams,
-    //     'user_YLpfBi0BUMmnGHush9hVq'
-    //   )
-    //   .then((result) => {
-    //     console.log(result.text);
-    //   }, (error) => {
-    //     console.log(error.text);
-    //   });
+    emailjs
+      .send(
+        'service_nmm7e97',
+        'template_emmilo3',
+        templateParams,
+        'user_YLpfBi0BUMmnGHush9hVq'
+      )
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
 
     setInfo({
       name: '',
