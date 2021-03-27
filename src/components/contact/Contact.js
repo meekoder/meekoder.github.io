@@ -10,7 +10,7 @@ const Main = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
  .inner {
     width: 90%;
     @media (min-width : 992px) {
