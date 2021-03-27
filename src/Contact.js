@@ -124,7 +124,7 @@ const Message = styled.textarea`
   }
 `;
 
-const Send = styled.button`
+const Send = styled.input`
   cursor: pointer;
   border: 2px solid #ace6d3;
   border-radius: 10px;
@@ -171,7 +171,7 @@ const Contact = () => {
     message: '',
   });
 
-  const handleChange = (param, e) => {
+  const handleChange = (param) => (e) => {
     setInfo({ ...info, [param] : e.target.value });
   };
 
@@ -186,19 +186,19 @@ const Contact = () => {
       message_html: message,
     };
 
-    emailjs
-      .send(
-        'service_nmm7e97',
-        'template_emmilo3',
-        templateParams,
-        'user_YLpfBi0BUMmnGHush9hVq'
-      )
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
-    ;
+    console.log('submitted')
+    // emailjs
+    //   .send(
+    //     'service_nmm7e97',
+    //     'template_emmilo3',
+    //     templateParams,
+    //     'user_YLpfBi0BUMmnGHush9hVq'
+    //   )
+    //   .then((result) => {
+    //     console.log(result.text);
+    //   }, (error) => {
+    //     console.log(error.text);
+    //   });
 
     setInfo({
       name: '',
@@ -216,19 +216,19 @@ const Contact = () => {
           <Text>I'm currently seeking new opportunites.</Text>
           <Text>Please feel free to reach out through email or connect with me on LinkedIn or Twitter!</Text>
         </StyledDiv>
-        <form>
+        <form onSubmit={handleSubmit}>
           <NameEmail>
-            <Input type="text" placeholder="Name" value={info.name} onChange={(e) => handleChange('name', e)} />
-            <Input type="email" placeholder="Email" value={info.email} onChange={(e) => handleChange('email', e)} />
+            <Input type="text" name="name" placeholder="Name" value={info.name} onChange={handleChange('name')} required />
+            <Input type="email" placeholder="Email" value={info.email} onChange={handleChange('email')} required />
           </NameEmail>
           <Subject>
-            <Input type="text" placeholder="Subject" className="subject"  value={info.subject} onChange={(e) => handleChange('subject', e)} />
+            <Input type="text" placeholder="Subject" className="subject"  value={info.subject} onChange={handleChange('subject')} required />
           </Subject>
-          <Message placeholder="Your Message" value={info.message} onChange={(e) => handleChange('message', e)}></Message>
+          <Message placeholder="Your Message" value={info.message} onChange={handleChange('message')} required />
+          <Button>
+            <Send type="submit" value="Send" />
+          </Button>
         </form>
-        <Button>
-          <Send type="submit" onClick={handleSubmit}>Send</Send>
-        </Button>
       </div>
       <Footer>
         <Social />
