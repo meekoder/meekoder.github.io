@@ -42,6 +42,9 @@ const Resume = styled.div`
   }
 `;
 
+const Header = styled.header`
+`;
+
 const Nav = () => {
 
   const handleResume = () => {
@@ -49,7 +52,7 @@ const Nav = () => {
   };
 
   return (
-    <header>
+    <Header>
       <StyledNav>
         <Links>
           <li><Link activeClass="active" to="about" spy={ true } smooth={ true }>About</Link></li>
@@ -66,7 +69,7 @@ const Nav = () => {
           </Resume>
         </Links>
       </StyledNav>
-    </header>
+    </Header>
   );
 };
 
