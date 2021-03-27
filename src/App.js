@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Landing from './Landing';
-import Nav from './Nav';
-import About from './About';
-import Experience from './Experience';
-import Projects from './Projects';
-import Contact from './Contact';
+import Landing from './components/Landing';
+import Nav from './components/nav/Nav';
+import About from './components/About';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Contact from './components/contact/Contact';
 import GlobalStyle from './GlobalStyle';
 
 const Main = styled.div`

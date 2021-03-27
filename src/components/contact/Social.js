@@ -1,5 +1,5 @@
 import React from 'react';
-import { socialMedia } from './config';
+import { socialMedia } from '../../config';
 import styled from 'styled-components';
 import Icon from './icons/icon';
 
