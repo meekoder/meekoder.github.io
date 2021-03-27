@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import * as emailjs from 'emailjs-com';
 import styled from 'styled-components';
 import Social from './Social';
+import Confirmation from './Confirmation';
 
 const Main = styled.div`
   max-width: 900px;
@@ -34,13 +35,14 @@ const Main = styled.div`
       font-size: 12px;
     }
   }
-`;
 
-const StyledDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
 `;
 
 const Text = styled.p`
@@ -56,14 +58,22 @@ const Text = styled.p`
 `;
 
 const NameEmail = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   @media (min-width : 992px) {
     display: grid;
-    grid-template-columns: 3fr 3fr;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
 `;
 
 const Subject = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   @media (min-width : 992px) {
     display: grid;
     grid-template-columns: 3fr;
@@ -80,7 +90,6 @@ const Input = styled.input`
   padding: 0 2%;
   border: 0;
   height: 100px;
-  line-height: 1.6em;
   font-size: 2.5em;
   margin-top: 30px;
   @media (min-width : 992px) {
@@ -170,6 +179,7 @@ const Contact = () => {
     subject: '',
     message: '',
   });
+  const [showConfirm, setShowConfirm] = useState(false);
 
   const handleChange = (param) => (e) => {
     setInfo({ ...info, [param] : e.target.value });
@@ -194,6 +204,7 @@ const Contact = () => {
         'user_YLpfBi0BUMmnGHush9hVq'
       )
       .then((result) => {
+        setShowConfirm(true);
         console.log(result.text);
       }, (error) => {
         console.log(error.text);
@@ -210,18 +221,18 @@ const Contact = () => {
   return (
     <Main id="contact">
       <div className="inner">
-        <StyledDiv>   
+        <div className="center">   
           <p className="title">Get In Touch</p>
           <Text>I'm currently seeking new opportunites.</Text>
           <Text>Please feel free to reach out through email or connect with me on LinkedIn or Twitter!</Text>
-        </StyledDiv>
-        <form onSubmit={handleSubmit}>
+        </div>
+        <form className="center" onSubmit={handleSubmit}>
           <NameEmail>
             <Input type="text" name="name" placeholder="Name" value={info.name} onChange={handleChange('name')} required />
             <Input type="email" placeholder="Email" value={info.email} onChange={handleChange('email')} required />
           </NameEmail>
           <Subject>
-            <Input type="text" placeholder="Subject" className="subject"  value={info.subject} onChange={handleChange('subject')} required />
+            <Input type="text" placeholder="Subject" className="subject" value={info.subject} onChange={handleChange('subject')} required />
           </Subject>
           <Message placeholder="Your Message" value={info.message} onChange={handleChange('message')} required />
           <Button>
@@ -229,6 +240,7 @@ const Contact = () => {
           </Button>
         </form>
       </div>
+      {showConfirm && <Confirmation className="fade-out" />}
       <Footer>
         <Social />
         <p className="footer">© 2021 Meekoly Rusdi.</p>
