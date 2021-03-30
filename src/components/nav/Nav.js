@@ -4,8 +4,11 @@ import { Link } from 'react-scroll';
 import resume from './resume.pdf';
 
 const StyledNav = styled.nav`
-  display: flex;
-  justify-content: flex-end;
+  display: none;
+  @media (min-width : 992px) {
+    display: flex;
+    justify-content: flex-end;
+  }
 `;
 
 const Links = styled.ul`
