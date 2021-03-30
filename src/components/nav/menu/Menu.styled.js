@@ -20,7 +20,7 @@ export const StyledMenu = styled.nav`
 
   li {
     list-style-type: none;
-    font-size: 2rem;
+    font-size: 3rem;
     text-transform: uppercase;
     padding: 2rem 0;
     font-weight: bold;

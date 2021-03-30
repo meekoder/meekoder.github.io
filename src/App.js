@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { useOnClickOutside } from './hooks';
 import styled from 'styled-components';
 import Landing from './components/Landing';
 import Nav from './components/nav/Nav';
@@ -29,11 +30,13 @@ const Content = styled.div`
 
 const App = () => {
   const [open, setOpen] = useState(false);
+  const node = useRef(); 
+  useOnClickOutside(node, () => setOpen(false));
   
   return (
     <Main>
       <GlobalStyle />
-      <div className="burger">
+      <div className="burger" ref={node}>
         <Burger open={open} setOpen={setOpen} />
         <Menu open={open} setOpen={setOpen} />
       </div>

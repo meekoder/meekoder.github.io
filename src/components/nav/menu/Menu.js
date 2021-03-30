@@ -7,14 +7,15 @@ import resume from '../resume.pdf';
 
 const Resume = styled.div`
   cursor: pointer;
-  border: 1px solid #ace6d3;
-  border-radius: 5px;
+  border: 5px solid #ace6d3;
+  border-radius: 10px;
   padding: 1.5rem 1rem;
   text-align: center;
   font-weight: bold;
   letter-spacing: 0.25rem;
   color: #2f343f;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  margin-top: 2rem;
   background-color: transparent;
   &:hover,
   &:focus,
