@@ -126,6 +126,7 @@ const Message = styled.textarea`
   }
   &::placeholder {
     font-size: 40px;
+    font-weight: normal;
     @media (min-width : 992px) {
       font-size: 1em;
     }

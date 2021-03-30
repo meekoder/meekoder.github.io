@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useOnClickOutside } from './hooks';
 import styled from 'styled-components';
 import Landing from './components/Landing';
@@ -32,6 +32,9 @@ const App = () => {
   const [open, setOpen] = useState(false);
   const node = useRef(); 
   useOnClickOutside(node, () => setOpen(false));
+  useEffect(() => {
+    open ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'unset';
+  }, [open]);
   
   return (
     <Main>
