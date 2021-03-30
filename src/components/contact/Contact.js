@@ -8,7 +8,7 @@ const Main = styled.div`
   max-width: 900px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100vh;
  .inner {
@@ -42,7 +42,6 @@ const Main = styled.div`
     justify-content: center;
     align-items: center;
   }
-
 `;
 
 const Text = styled.p`
@@ -167,9 +166,7 @@ const Button = styled.div`
 
 const Footer = styled.div`
   display: flex;
-  height: -webkit-fill-available;
   flex-direction: column;
-  justify-content: flex-end;
 `;
 
 const Contact = () => {
@@ -241,7 +238,7 @@ const Contact = () => {
         </form>
       </div>
       {showConfirm && <Confirmation className="fade-out" />}
-      <Footer>
+      <Footer className="social">
         <Social />
         <p className="footer">© 2021 Meekoly Rusdi.</p>
       </Footer>
