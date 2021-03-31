@@ -34,13 +34,10 @@ const App = () => {
   useOnClickOutside(node, () => setOpen(false));
 
   useEffect(() => {
-    if (open) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
+    open ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'unset';
+    open ? document.body.style.position = 'fixed' : document.body.style.position = 'statis';
   }, [open]);
-  
+
   return (
     <Main>
       <GlobalStyle />

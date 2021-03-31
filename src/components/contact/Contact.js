@@ -103,7 +103,7 @@ const Input = styled.input`
 
 const Message = styled.textarea`
   font-family: inherit;
-  font-size: 1.5em;
+  font-size: 2.5em;
   border: 0;
   border-radius: 10px;
   resize: none;
@@ -124,7 +124,7 @@ const Message = styled.textarea`
     height: 10em;
     line-height: 1.6em;
   }
-  &::placeholder {
+  ::placeholder {
     font-size: 40px;
     font-weight: normal;
     @media (min-width : 992px) {
@@ -148,9 +148,6 @@ const Send = styled.input`
     color: #ace6d3;
     outline: none;
     transition: color.2s cubic-bezier(.3,0,.45,1), background-color .2s cubic-bezier(.3,0,.45,1);
-  }
-  &:after {
-    display: none !important;
   }
   @media (min-width : 992px) {
     border: 1px solid #ace6d3;
@@ -194,19 +191,20 @@ const Contact = () => {
       message_html: message,
     };
 
-    emailjs
-      .send(
-        'service_nmm7e97',
-        'template_emmilo3',
-        templateParams,
-        'user_YLpfBi0BUMmnGHush9hVq'
-      )
-      .then((result) => {
         setShowConfirm(true);
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
+    // emailjs
+    //   .send(
+    //     'service_nmm7e97',
+    //     'template_emmilo3',
+    //     templateParams,
+    //     'user_YLpfBi0BUMmnGHush9hVq'
+    //   )
+    //   .then((result) => {
+    //     setShowConfirm(true);
+    //     console.log(result.text);
+    //   }, (error) => {
+    //     console.log(error.text);
+    //   });
 
     setInfo({
       name: '',
