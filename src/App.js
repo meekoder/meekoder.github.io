@@ -16,6 +16,7 @@ const Main = styled.div`
   min-height: 100vh;
   color: white;
   .burger {
+    position: relative;
     @media (min-width : 992px) {
       display: none;
     }
@@ -35,7 +36,7 @@ const App = () => {
 
   useEffect(() => {
     open ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'unset';
-    open ? document.body.style.position = 'fixed' : document.body.style.position = 'statis';
+    open ? document.body.style.position = 'fixed' : document.body.style.position = 'unset';
   }, [open]);
 
   return (
