@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const Main = styled.div`
   max-width: 900px;
@@ -34,7 +35,6 @@ const Picture = styled.img`
   }
   @media (min-width : 992px) {
     max-width: 300px;
-    margin: 0;
   }
 `;
 
@@ -75,26 +75,40 @@ const Projects = () => {
   return (
     <Main id="projects">
       <div className="inner">
-        <p className="title">Some of My Projects</p>
+        <ScrollAnimation animateIn="fadeInDown">
+          <p className="title">Some of My Projects</p>
+        </ScrollAnimation>
         <StyledDiv>
-          <Picture alt="spotted landing page" src="/images/spotted.png" className="img" />
-          <StyledParagraph>
-            <p className="subtitle">Spotted</p>
-            <Highlight />
-            <p className="text">An application geared towards car enthusiasts. View and post photos of vehicles, locations of car meets, or buy/sell a vehicle on the marketplace. Follow people you know and more.</p>
-          </StyledParagraph>
-          <Picture alt="e-commerce reviews" src="/images/ecom.png" className="img" />
-          <StyledParagraph>
-            <p className="subtitle">E-Commerce Store</p>
-            <Highlight />
-            <p className="text">A web application built by a team of engineers that delivers a modular UI/UX for an E-commerce store. View photos of products, related items, and user reviews. Filter or sort reviews and add items to your cart.</p>
-          </StyledParagraph>
-          <Picture alt="vacation rental marketplace" src="/images/vacation.png" className="img" />
-          <StyledParagraph>
-            <p className="subtitle">Vacation Rental Marketplace</p>
-            <Highlight />
-            <p className="text">Primarily a backend focused application whose goal was to optimize and scale a system architecture for an online vacation rental marketplace. Microservices were scaled using NGINX, stress tested with Loader.io, and New Relic was utilized to determine bottlenecks.</p>
-          </StyledParagraph>
+          <ScrollAnimation animateIn="fadeInLeftBig">
+            <Picture alt="spotted landing page" src="/images/spotted.png" className="img" />
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="fadeInRightBig">
+            <StyledParagraph>
+              <p className="subtitle">Spotted</p>
+              <Highlight />
+              <p className="text">An application geared towards car enthusiasts. View and post photos of vehicles, locations of car meets, or buy/sell a vehicle on the marketplace. Follow people you know and more.</p>
+            </StyledParagraph>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="fadeInRightBig">
+            <Picture alt="e-commerce reviews" src="/images/ecom.png" className="img" />
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="fadeInLeftBig">
+            <StyledParagraph>
+              <p className="subtitle">E-Commerce Store</p>
+              <Highlight />
+              <p className="text">A web application built by a team of engineers that delivers a modular UI/UX for an E-commerce store. View photos of products, related items, and user reviews. Filter or sort reviews and add items to your cart.</p>
+            </StyledParagraph>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="fadeInLeftBig">
+            <Picture alt="vacation rental marketplace" src="/images/vacation.png" className="img" />
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="fadeInRightBig">
+            <StyledParagraph>
+              <p className="subtitle">Vacation Rental Marketplace</p>
+              <Highlight />
+              <p className="text">Primarily a backend focused application whose goal was to optimize and scale a system architecture for an online vacation rental marketplace. Microservices were scaled using NGINX, stress tested with Loader.io, and New Relic was utilized to determine bottlenecks.</p>
+            </StyledParagraph>
+          </ScrollAnimation>
         </StyledDiv>
       </div>
     </Main>
