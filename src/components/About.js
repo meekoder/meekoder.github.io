@@ -55,7 +55,7 @@ const About = () => {
     <Main id="about">
       <div className="inner">
         <div>
-          <ScrollAnimation animateIn="fadeInUp">
+          <ScrollAnimation animateIn="fadeInDown">
             <p className="title">About Me</p>     
           </ScrollAnimation>
           <ScrollAnimation animateIn="fadeInUp">
