@@ -48,10 +48,10 @@ const Landing = () => {
       <ScrollAnimation duration={3} animateIn="fadeIn">
         <Greeting>Hi, my name is</Greeting>     
       </ScrollAnimation>
-      <ScrollAnimation duration={5} animateIn="bounceInRight" animateOut="bounceOutLeft">
+      <ScrollAnimation duration={3} animateIn="fadeInRightBig">
         <Name>Meeko Rusdi.</Name>
       </ScrollAnimation>
-      <ScrollAnimation delay={5000} animateIn="fadeIn">
+      <ScrollAnimation delay={2000} animateIn="fadeIn">
         <Intro>I'm a software engineer.</Intro>
       </ScrollAnimation>
     </StyledDiv>

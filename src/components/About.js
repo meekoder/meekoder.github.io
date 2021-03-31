@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const Main = styled.div`
   max-width: 900px;
@@ -54,22 +55,28 @@ const About = () => {
     <Main id="about">
       <div className="inner">
         <div>
-          <p className="title">About Me</p>     
+          <ScrollAnimation animateIn="fadeInUp">
+            <p className="title">About Me</p>     
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="fadeInUp">
           <StyledP className="text">
-          <p>Hello! I'm Meeko.</p>
-          <p>I'm a 22 year old software engineer based in the San Francisco Bay Area who has a strong passion for writing clean, efficient and performant code. I enjoy building reactive websites and applications that provide aesthetic and user-friendly experiences.</p>
-          <p>While I was a <StyledA target="_blank" href="https://www.alamy.com/airman-meekoly-munoz-363rd-training-squadron-maintenance-management-analysis-student-is-a-native-of-bloomfield-new-jersey-and-represents-international-students-in-the-maintenance-management-analysis-course-at-sheppard-air-force-base-texas-sept-22-2017-these-students-learn-how-to-determine-the-cost-efficiency-of-air-force-maintenance-activities-they-collect-and-analyze-data-to-improve-operations-image222016272.html">data analyst</StyledA> for the US Air Force, I discovered that I enjoy using software to create robust solutions to practical problems. I love that engineering provides the continuous opportunity to learn and grow.</p>
-            </StyledP>
+            <p>Hello! I'm Meeko.</p>
+            <p>I'm a 22 year old software engineer based in the San Francisco Bay Area who has a strong passion for writing clean, efficient and performant code. I enjoy building reactive websites and applications that provide aesthetic and user-friendly experiences.</p>
+            <p>While I was a <StyledA target="_blank" href="https://www.alamy.com/airman-meekoly-munoz-363rd-training-squadron-maintenance-management-analysis-student-is-a-native-of-bloomfield-new-jersey-and-represents-international-students-in-the-maintenance-management-analysis-course-at-sheppard-air-force-base-texas-sept-22-2017-these-students-learn-how-to-determine-the-cost-efficiency-of-air-force-maintenance-activities-they-collect-and-analyze-data-to-improve-operations-image222016272.html">data analyst</StyledA> for the US Air Force, I discovered that I enjoy using software to create robust solutions to practical problems. I love that engineering provides the continuous opportunity to learn and grow.</p>
+          </StyledP>
           <p className="subtitle">Other things I'm Into</p>
           <ul className="list text">
             <li className="listItem">I've been snowboarding since the age of 10</li>
             <li className="listItem">Cars! I hope to one day own a GTR R32</li>
             <li className="listItem">I play League of Legends and Mobile Legends</li>
           </ul>
+          </ScrollAnimation>
         </div>
-        <Selfie> 
-          <img alt="Meeko Rusdi" src="/images/selfie.jpg" className="img" />
-        </Selfie>
+        <ScrollAnimation animateIn="fadeInRightBig">
+          <Selfie> 
+            <img alt="Meeko Rusdi" src="/images/selfie.jpg" className="img" />
+          </Selfie>
+        </ScrollAnimation>
       </div>
     </Main>
   );
