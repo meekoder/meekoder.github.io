@@ -42,17 +42,13 @@ const Resume = styled.div`
   }
 `;
 
-const Header = styled.header`
-`;
-
 const Nav = () => {
-
   const handleResume = () => {
     window.open(resume);
   };
 
   return (
-    <Header>
+    <header>
       <StyledNav>
         <Links>
           <li><Link activeClass="active" to="about" spy={ true } smooth={ true }>About</Link></li>
@@ -69,7 +65,7 @@ const Nav = () => {
           </Resume>
         </Links>
       </StyledNav>
-    </Header>
+    </header>
   );
 };
 
