@@ -40,21 +40,21 @@ const App = () => {
   }, [open]);
 
   return (
-    <Main>
-      <GlobalStyle />
-      <div className="burger" ref={node}>
-        <Burger open={open} setOpen={setOpen} />
-        <Menu open={open} setOpen={setOpen} />
-      </div>
-      <Nav />
-      <Content>
-        <Landing />
-        <About />
-        <Experience />
-        <Projects />
-        <Contact />
-      </Content>
-    </Main>
+      <Main>
+        <GlobalStyle />
+        <div className="burger" ref={node}>
+          <Burger open={open} setOpen={setOpen} />
+          <Menu open={open} setOpen={setOpen} />
+        </div>
+        <Nav />
+        <Content>
+          <Landing />
+          <About />
+          <Experience />
+          <Projects />
+          <Contact />
+        </Content>
+      </Main>
   );
 };
 

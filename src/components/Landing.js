@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const StyledDiv = styled.div`
   width: 85%;
@@ -44,9 +45,15 @@ const Intro = styled.p`
 const Landing = () => {
   return (
     <StyledDiv>
-      <Greeting>Hi, my name is</Greeting>     
-      <Name>Meeko Rusdi.</Name>
-      <Intro>I'm a software engineer.</Intro>
+      <ScrollAnimation duration={3} animateIn="fadeIn">
+        <Greeting>Hi, my name is</Greeting>     
+      </ScrollAnimation>
+      <ScrollAnimation duration={5} animateIn="bounceInRight" animateOut="bounceOutLeft">
+        <Name>Meeko Rusdi.</Name>
+      </ScrollAnimation>
+      <ScrollAnimation delay={5000} animateIn="fadeIn">
+        <Intro>I'm a software engineer.</Intro>
+      </ScrollAnimation>
     </StyledDiv>
   );
 };
