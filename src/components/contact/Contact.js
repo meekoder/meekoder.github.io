@@ -143,12 +143,20 @@ const Send = styled.input`
   font-size: 50px;
   background-color: transparent;
   &:hover,
-  &:focus,
-  &:active {
-    background-color: #596277;
+  &:focus {
     color: #ace6d3;
+    background-color: #596277;
     outline: none;
     transition: color.2s cubic-bezier(.3,0,.45,1), background-color .2s cubic-bezier(.3,0,.45,1);
+  }
+  &:active {
+    color: #ace6d3;
+    border: 2px solid #ace6d3;
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    color: #f3f4f5;
+    font-size: 50px;
+    background-color: transparent;
   }
   @media (min-width : 992px) {
     border: 1px solid #ace6d3;
