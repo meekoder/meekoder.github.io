@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 import * as emailjs from 'emailjs-com';
 import styled from 'styled-components';
 import Social from './Social';
@@ -217,10 +218,15 @@ const Contact = () => {
     <Main id="contact">
       <div className="inner">
         <div className="center">   
-          <p className="title">Get In Touch</p>
-          <Text>I'm currently seeking new opportunites.</Text>
-          <Text>Please feel free to reach out through email or connect with me on LinkedIn or Twitter!</Text>
+          <ScrollAnimation animateIn="fadeInDown">
+            <p className="title">Get In Touch</p>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="fadeInUp">
+            <Text>I'm currently seeking new opportunites.</Text>
+            <Text>Please feel free to reach out through email or connect with me on LinkedIn or Twitter!</Text>
+          </ScrollAnimation>
         </div>
+        <ScrollAnimation animateIn="fadeInUp">
         <form className="center" onSubmit={handleSubmit}>
           <NameEmail>
             <Input type="text" name="name" placeholder="Name" value={info.name} onChange={handleChange('name')} required />
@@ -234,6 +240,7 @@ const Contact = () => {
             <Send type="submit" value="Send" />
           </Button>
         </form>
+        </ScrollAnimation>
       </div>
       {showConfirm && <Confirmation className="fade-out" />}
       <Footer className="social">
