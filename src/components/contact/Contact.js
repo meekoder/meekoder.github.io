@@ -191,20 +191,19 @@ const Contact = () => {
       message_html: message,
     };
 
+    emailjs
+      .send(
+        'service_nmm7e97',
+        'template_emmilo3',
+        templateParams,
+        'user_YLpfBi0BUMmnGHush9hVq'
+      )
+      .then((result) => {
         setShowConfirm(true);
-    // emailjs
-    //   .send(
-    //     'service_nmm7e97',
-    //     'template_emmilo3',
-    //     templateParams,
-    //     'user_YLpfBi0BUMmnGHush9hVq'
-    //   )
-    //   .then((result) => {
-    //     setShowConfirm(true);
-    //     console.log(result.text);
-    //   }, (error) => {
-    //     console.log(error.text);
-    //   });
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
 
     setInfo({
       name: '',
