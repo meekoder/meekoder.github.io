@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useOnClickOutside } from './hooks';
+import 'animate.css/animate.min.css';
 import styled from 'styled-components';
 import Landing from './components/Landing';
 import Nav from './components/nav/Nav';
