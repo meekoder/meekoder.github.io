@@ -72,6 +72,13 @@ const Highlight = styled.div`
 `;
 
 const Projects = () => {
+  const getAnimation = (direction) => {
+    const width = Math.max(window.screen.width, window.innerWidth);
+    if (width < 992) {
+      return 'fadeInUp';
+    }
+    return direction === 'left' ? 'fadeInLeft' : 'fadeInRight';
+  };
   return (
     <Main id="projects">
       <div className="inner">
@@ -79,30 +86,30 @@ const Projects = () => {
           <p className="title">Some of My Projects</p>
         </ScrollAnimation>
         <StyledDiv>
-          <ScrollAnimation animateIn="fadeInLeft">
+          <ScrollAnimation animateIn={getAnimation('left')}>
             <Picture alt="spotted landing page" src="/images/spotted.png" className="img" />
           </ScrollAnimation>
-          <ScrollAnimation animateIn="fadeInRight">
+          <ScrollAnimation animateIn={getAnimation('right')}>
             <StyledParagraph>
               <p className="subtitle">Spotted</p>
               <Highlight />
               <p className="text">An application geared towards car enthusiasts. View and post photos of vehicles, locations of car meets, or buy/sell a vehicle on the marketplace. Follow people you know and more.</p>
             </StyledParagraph>
           </ScrollAnimation>
-          <ScrollAnimation animateIn="fadeInRight">
+          <ScrollAnimation animateIn={getAnimation('right')}>
             <Picture alt="e-commerce reviews" src="/images/ecom.png" className="img" />
           </ScrollAnimation>
-          <ScrollAnimation animateIn="fadeInLeft">
+          <ScrollAnimation animateIn={getAnimation('left')}>
             <StyledParagraph>
               <p className="subtitle">E-Commerce Store</p>
               <Highlight />
               <p className="text">A web application built by a team of engineers that delivers a modular UI/UX for an E-commerce store. View photos of products, related items, and user reviews. Filter or sort reviews and add items to your cart.</p>
             </StyledParagraph>
           </ScrollAnimation>
-          <ScrollAnimation animateIn="fadeInLeft">
+          <ScrollAnimation animateIn={getAnimation('left')}>
             <Picture alt="vacation rental marketplace" src="/images/vacation.png" className="img" />
           </ScrollAnimation>
-          <ScrollAnimation animateIn="fadeInRight">
+          <ScrollAnimation animateIn={getAnimation('right')}>
             <StyledParagraph>
               <p className="subtitle">Vacation Rental Marketplace</p>
               <Highlight />
