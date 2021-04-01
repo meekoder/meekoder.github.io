@@ -51,6 +51,11 @@ const StyledA = styled.a`
 `;
 
 const About = () => {
+  const getAnimation = () => {
+    const width = Math.max(window.screen.width, window.innerWidth);
+    return width < 992 ? 'fadeInUp' : 'fadeInRight';
+  };
+
   return (
     <Main id="about">
       <div className="inner">
@@ -72,7 +77,7 @@ const About = () => {
           </ul>
           </ScrollAnimation>
         </div>
-        <ScrollAnimation animateIn="fadeInRight">
+        <ScrollAnimation animateIn={getAnimation()}>
           <Selfie> 
             <img alt="Meeko Rusdi" src="/images/selfie.jpg" className="img" />
           </Selfie>
