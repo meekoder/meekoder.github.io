@@ -72,7 +72,7 @@ const About = () => {
           </ul>
           </ScrollAnimation>
         </div>
-        <ScrollAnimation animateIn="fadeInRightBig">
+        <ScrollAnimation animateIn="fadeInRight">
           <Selfie> 
             <img alt="Meeko Rusdi" src="/images/selfie.jpg" className="img" />
           </Selfie>
