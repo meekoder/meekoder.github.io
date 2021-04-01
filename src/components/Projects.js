@@ -79,30 +79,30 @@ const Projects = () => {
           <p className="title">Some of My Projects</p>
         </ScrollAnimation>
         <StyledDiv>
-          <ScrollAnimation animateIn="fadeInLeftBig">
+          <ScrollAnimation animateIn="fadeInLeft">
             <Picture alt="spotted landing page" src="/images/spotted.png" className="img" />
           </ScrollAnimation>
-          <ScrollAnimation animateIn="fadeInRightBig">
+          <ScrollAnimation animateIn="fadeInRight">
             <StyledParagraph>
               <p className="subtitle">Spotted</p>
               <Highlight />
               <p className="text">An application geared towards car enthusiasts. View and post photos of vehicles, locations of car meets, or buy/sell a vehicle on the marketplace. Follow people you know and more.</p>
             </StyledParagraph>
           </ScrollAnimation>
-          <ScrollAnimation animateIn="fadeInRightBig">
+          <ScrollAnimation animateIn="fadeInRight">
             <Picture alt="e-commerce reviews" src="/images/ecom.png" className="img" />
           </ScrollAnimation>
-          <ScrollAnimation animateIn="fadeInLeftBig">
+          <ScrollAnimation animateIn="fadeInLeft">
             <StyledParagraph>
               <p className="subtitle">E-Commerce Store</p>
               <Highlight />
               <p className="text">A web application built by a team of engineers that delivers a modular UI/UX for an E-commerce store. View photos of products, related items, and user reviews. Filter or sort reviews and add items to your cart.</p>
             </StyledParagraph>
           </ScrollAnimation>
-          <ScrollAnimation animateIn="fadeInLeftBig">
+          <ScrollAnimation animateIn="fadeInLeft">
             <Picture alt="vacation rental marketplace" src="/images/vacation.png" className="img" />
           </ScrollAnimation>
-          <ScrollAnimation animateIn="fadeInRightBig">
+          <ScrollAnimation animateIn="fadeInRight">
             <StyledParagraph>
               <p className="subtitle">Vacation Rental Marketplace</p>
               <Highlight />
