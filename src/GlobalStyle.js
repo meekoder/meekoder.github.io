@@ -22,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
 
   .subtitle {
     margin-bottom: 10px;
+    text-decoration: none;
     font-weight: bold;
     color: #ACE6D3;
     font-size: 50px;

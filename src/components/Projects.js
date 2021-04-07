@@ -91,7 +91,7 @@ const Projects = () => {
           </ScrollAnimation>
           <ScrollAnimation animateIn={getAnimation('right')}>
             <StyledParagraph>
-              <p className="subtitle">Spotted</p>
+              <a className="subtitle" href="https://github.com/meekoder/spotted" target="_blank" rel="noopener noreferrer">Spotted</a>
               <Highlight />
               <p className="text">An application geared towards car enthusiasts. View and post photos of vehicles, locations of car meets, or buy/sell a vehicle on the marketplace. Follow people you know and more.</p>
             </StyledParagraph>
@@ -101,7 +101,7 @@ const Projects = () => {
           </ScrollAnimation>
           <ScrollAnimation animateIn={getAnimation('left')}>
             <StyledParagraph>
-              <p className="subtitle">E-Commerce Store</p>
+              <a className="subtitle" href="https://github.com/meekoder/e-commerce-reviews" target="_blank" rel="noopener noreferrer">E-Commerce Store</a>
               <Highlight />
               <p className="text">A web application built by a team of engineers that delivers a modular UI/UX for an E-commerce store. View photos of products, related items, and user reviews. Filter or sort reviews and add items to your cart.</p>
             </StyledParagraph>
@@ -111,7 +111,7 @@ const Projects = () => {
           </ScrollAnimation>
           <ScrollAnimation animateIn={getAnimation('right')}>
             <StyledParagraph>
-              <p className="subtitle">Vacation Rental Marketplace</p>
+              <a className="subtitle" href="https://github.com/meekoder/vacation-rentals-reservations" target="_blank" rel="noopener noreferrer">Vacation Rental Marketplace</a>
               <Highlight />
               <p className="text">Primarily a backend focused application whose goal was to optimize and scale a system architecture for an online vacation rental marketplace. Microservices were scaled using NGINX, stress tested with Loader.io, and New Relic was utilized to determine bottlenecks.</p>
             </StyledParagraph>
