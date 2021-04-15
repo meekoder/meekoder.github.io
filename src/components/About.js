@@ -31,11 +31,39 @@ const Main = styled.div`
 
 const Selfie = styled.div`
   align-self: center;
-  .img {
+  .wrapper {
+    display: block;
+    position: relative;
     width: 100%;
-  }
-  @media (min-width : 992px) {
-    max-width: 400px;
+    border-radius: 5px;
+    .img {
+      position: relative;
+      width: 100%;
+      border-radius: 10px;
+      @media (min-width : 992px) {
+        border-radius: 5px;
+        max-width: 400px;
+      }
+    }
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      border-radius: 10px;
+      border: 5px solid #AAF0D1;
+      top: 30px;
+      left: 30px;
+      @media (min-width : 992px) {
+        border-radius: 5px;
+        border-width: 2px;
+        top: 15px;
+        left: 15px;
+      }
+    }
   }
 `;
 
@@ -73,13 +101,15 @@ const About = () => {
           <ul className="list text">
             <li className="listItem">I've been snowboarding since the age of 10</li>
             <li className="listItem">Cars! I hope to one day own a GTR R32</li>
-            <li className="listItem">I play League of Legends and Mobile Legends</li>
+            <li className="listItem">League of Legends</li>
           </ul>
           </ScrollAnimation>
         </div>
         <ScrollAnimation animateIn={getAnimation()}>
           <Selfie> 
-            <img alt="Meeko Rusdi" src="/images/selfie.jpg" className="img" />
+            <div className="wrapper">
+              <img alt="Meeko Rusdi" src="/images/selfie.jpg" className="img" />
+            </div>
           </Selfie>
         </ScrollAnimation>
       </div>
