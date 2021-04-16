@@ -96,10 +96,10 @@ const Projects = () => {
               <p className="text">An application geared towards car enthusiasts. View and post photos of vehicles, locations of car meets, or buy/sell a vehicle on the marketplace. Follow people you know and more.</p>
             </StyledParagraph>
           </ScrollAnimation>
-          <ScrollAnimation animateIn={getAnimation('right')}>
+          <ScrollAnimation animateIn={getAnimation('left')}>
             <Picture alt="e-commerce reviews" src="/images/ecom.png" className="img" />
           </ScrollAnimation>
-          <ScrollAnimation animateIn={getAnimation('left')}>
+          <ScrollAnimation animateIn={getAnimation('right')}>
             <StyledParagraph>
               <a className="subtitle" href="https://github.com/meekoder/e-commerce-reviews" target="_blank" rel="noopener noreferrer">E-Commerce Store</a>
               <Highlight />
