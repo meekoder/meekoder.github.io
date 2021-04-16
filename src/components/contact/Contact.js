@@ -11,7 +11,7 @@ const Main = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  height: 100%;
  .inner {
     width: 90%;
     @media (min-width : 992px) {
@@ -163,8 +163,10 @@ const Button = styled.div`
 `;
 
 const Footer = styled.div`
-  display: flex;
-  flex-direction: column;
+  margin-top: 25em;
+  @media (min-width : 992px) {
+    margin-top: 10em;
+  }
 `;
 
 const Contact = () => {
