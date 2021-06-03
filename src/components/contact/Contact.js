@@ -223,7 +223,6 @@ const Contact = () => {
             <p className="title">Get In Touch</p>
           </ScrollAnimation>
           <ScrollAnimation animateIn="fadeInUp">
-            <Text>I'm currently seeking new opportunites.</Text>
             <Text>Please feel free to reach out through email or connect with me on LinkedIn or Twitter!</Text>
           </ScrollAnimation>
         </div>
