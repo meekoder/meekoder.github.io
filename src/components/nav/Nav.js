@@ -3,9 +3,16 @@ import styled from 'styled-components';
 import { Link } from 'react-scroll';
 import resume from './resume.pdf';
 
+const StyledHeader = styled.header`
+  position: sticky;
+  top: 0;
+  z-index: 2;
+`;
+
 const StyledNav = styled.nav`
   display: none;
   @media (min-width : 992px) {
+    background-color: #2f343f;
     display: flex;
     justify-content: flex-end;
   }
@@ -52,7 +59,7 @@ const Nav = () => {
   };
 
   return (
-    <header>
+    <StyledHeader>
       <StyledNav>
         <Links>
           <li><Link activeClass="active" to="about" spy={ true } smooth={ true }>About</Link></li>
@@ -69,7 +76,7 @@ const Nav = () => {
           </Resume>
         </Links>
       </StyledNav>
-    </header>
+    </StyledHeader>
   );
 };
 
