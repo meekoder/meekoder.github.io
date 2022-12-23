@@ -245,7 +245,7 @@ const Contact = () => {
       {showConfirm && <Confirmation className="fade-out" />}
       <Footer className="social">
         <Social />
-        <p className="footer">© 2021 Meekoly Rusdi.</p>
+        <p className="footer">© 2022 Meekoly Rusdi.</p>
       </Footer>
     </Main>
   );
